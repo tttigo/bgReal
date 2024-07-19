@@ -1,0 +1,23 @@
+/* Grid de Artistas */
+.artist-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.artist {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.artist img {
+    width: 100%;
+    height: auto;
+}
+
+.artist h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}

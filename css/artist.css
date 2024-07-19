@@ -1,0 +1,57 @@
+/* Estilos gerais para a página do artista */
+.artist-details {
+    padding: 1rem;
+    text-align: center;
+}
+
+.artist-details img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.artist-details h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.artist-details p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Grid de lançamentos do artista */
+.artist-lancamentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.artist-lancamento {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.artist-lancamento img {
+    width: 100%;
+    height: auto;
+}
+
+.artist-lancamento h5 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.artist-lancamento a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.artist-lancamento a:hover {
+    text-decoration: underline;
+}
