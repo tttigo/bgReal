@@ -2,19 +2,19 @@
     {
         "id": "1",
         "title": "Álbum 1",
-        "cover": "img/discografia/cover1.png",
+        "cover": "img/album/cover1.png",
         "artist": "1"
     },
     {
         "id": "2",
         "title": "Álbum 2",
-        "cover": "img/discografia/cover2.png",
+        "cover": "img/album/cover2.png",
         "artist": "1"
     },
     {
         "id": "3",
         "title": "Álbum 3",
-        "cover": "img/discografia/cover3.png",
+        "cover": "img/album/cover3.png",
         "artist": "2"
     }
 ]

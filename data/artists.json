@@ -4,13 +4,13 @@
         "name": "Artista 1",
         "photo": "img/artistas/artist1.jpg",
         "bio": "Biografia do Artista 1",
-        "lancamentos": ["1", "2"]
+        "releases": ["1", "2"]
     },
     {
         "id": "2",
         "name": "Artista 2",
         "photo": "img/artistas/artist2.jpg",
         "bio": "Biografia do Artista 2",
-        "lancamentos": ["3"]
+        "releases": ["3"]
     }
 ]
