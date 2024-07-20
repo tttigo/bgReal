@@ -16,6 +16,7 @@ function loadReleases() {
                     <a href="release.html?id=${release.id}">
                         <img src="${release.cover}" alt="${release.title}">
                         <h3>${release.title}</h3>
+                        <h3>${release.date}</h3>
                     </a>
                 `;
                 grid.appendChild(card);

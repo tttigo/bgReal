@@ -1,20 +1,30 @@
 [
     {
         "id": "1",
-        "title": "Album 1",
+        "title": "EP0001",
+        "date": "24-05-2023",
         "cover": "img/releases/cover1.jpg",
         "artist": "1"
     },
     {
         "id": "2",
-        "title": "Album 2",
+        "title": "EP0002",
+        "date": "24-05-2023",
         "cover": "img/releases/cover2.jpg",
         "artist": "1"
     },
     {
         "id": "3",
-        "title": "Album 3",
-        "cover": "img/releases/cover3.jpg",
+        "title": "QUE TU",
+        "date": "24-05-2023",
+        "cover": "img/releases/cover4.jpg",
+        "artist": "2"
+    },
+    {
+        "id": "4",
+        "title": "TODO SEU",
+        "date": "24-05-2023",
+        "cover": "img/releases/cover5.jpg",
         "artist": "2"
     }
 ]

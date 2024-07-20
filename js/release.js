@@ -19,7 +19,8 @@ function loadRelease() {
             if (release) {
                 document.getElementById('release-details').innerHTML = `
                     <img src="${release.cover}" alt="${release.title}">
-                    <h1>${release.title}</h1>
+                    <h3>${release.title}</h3>
+                    <h3>${release.date}</h3>
                     <p>Artist ID: ${release.artist}</p>
                 `;
                 loadReleaseArtist(release.artist);

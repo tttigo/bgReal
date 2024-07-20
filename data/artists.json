@@ -1,16 +1,16 @@
 [
     {
         "id": "1",
-        "name": "Artist 1",
+        "name": "tttigo",
         "photo": "img/artists/artist1.jpg",
-        "biography": "Biography of Artist 1",
+        "biography": "tttigo - assinatura do artista multimídia Thiago Fernandes, trabalha com música, vídeo, programação, direção criativa e engenharia de som. Trata a música como meio de encontro dos coletivos, criando contexto para que seu trabalho e de seus colaboradores em diversas linguagens se materializem.Antena da contemporaneidade, tttigo canaliza e mistura influências globais e locais na intenção de criar, a partir de sua linguagem, uma nova perspectiva da arte sonora brasileira, colidindo suas histórias com música pop, experimental, orgânica e eletrônica. Não se atendo a limites de gênero e temporalidade, a obra do jovem artista reflete a potência de sua mente criativa, muito atento aos movimentos do mundo e de seu lugar na construção de novos tempos.Ao longo dos últimos anos colaborou com artistas como dadá Joãozinho, JOCA, Mundo Video, AZULLLLLLLL, Ana Frango Elétrico, Alceu, Lessa Gustavo, Vitor Milagres, entre outres, além de ser co-fundador e membro do grupo ROSABEGE.",
         "releases": ["1", "2"]
     },
     {
         "id": "2",
-        "name": "Artist 2",
+        "name": "JP Damian",
         "photo": "img/artists/artist2.jpg",
-        "biography": "Biography of Artist 2",
-        "releases": ["3"]
+        "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "releases": ["3", "4"]
     }
 ]
