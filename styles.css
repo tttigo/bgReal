@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Padronizar tamanho da imagem do artista */
+#artist-details img {
+    width: 200px;  /* Defina a largura desejada */
+    height: 200px;  /* Defina a altura desejada */
+    object-fit: cover;  /* Mantém o aspecto da imagem e preenche o espaço definido */
+    border-radius: 50%;  /* Faz com que a imagem tenha bordas arredondadas (opcional) */
+    display: block;  /* Garante que a imagem se comporte como um bloco */
+    margin: 0 auto;  /* Centraliza a imagem horizontalmente */
+}
+
+/* Estilização adicional para a página de artista */
+#artist-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#artist-details h1 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#artist-details p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Padronizar tamanho da imagem do lançamento */
+#release-details img {
+    width: 200px;  /* Defina a largura desejada */
+    height: 200px;  /* Defina a altura desejada */
+    object-fit: cover;  /* Mantém o aspecto da imagem e preenche o espaço definido */
+    border-radius: 8px;  /* Faz com que a imagem tenha bordas arredondadas */
+    display: block;  /* Garante que a imagem se comporte como um bloco */
+    margin: 0 auto;  /* Centraliza a imagem horizontalmente */
+}
+
+/* Estilização adicional para a página de lançamento */
+#release-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#release-details h1 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#release-details p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Padronizar tamanho da imagem do artista na página de lançamento */
+#release-artist img {
+    width: 200px;  /* Defina a largura desejada */
+    height: 200px;  /* Defina a altura desejada */
+    object-fit: cover;  /* Mantém o aspecto da imagem e preenche o espaço definido */
+    border-radius: 50%;  /* Faz com que a imagem tenha bordas arredondadas */
+    display: block;  /* Garante que a imagem se comporte como um bloco */
+    margin: 0 auto;  /* Centraliza a imagem horizontalmente */
+}
+
+/* Estilização adicional para a seção do artista na página de lançamento */
+#release-artist {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#release-artist h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}

@@ -4,17 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loadArtist();
 });
 
-function loadComponent(id, url) {
-    fetch(url)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById(id).innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error loading component:', error);
-        });
-}
-
 function loadArtist() {
     const urlParams = new URLSearchParams(window.location.search);
     const artistId = urlParams.get('id');
@@ -28,16 +17,12 @@ function loadArtist() {
         .then(artists => {
             const artist = artists.find(a => a.id === artistId);
             if (artist) {
-                document.getElementById('artist-photo').src = artist.photo;
                 document.getElementById('artist-details').innerHTML = `
-                    <h3>${artist.name}</h3>
-                    <p>${artist.bio}</p>
-                    <h4>Releases</h4>
-                    <section id="artist-releases" class="artist-releases">
-                        <!-- Artist releases will be dynamically loaded here -->
-                    </section>
+                    <img src="${artist.photo}" alt="${artist.name}">
+                    <h1>${artist.name}</h1>
+                    <p>${artist.biography}</p>
                 `;
-                loadReleases(artist.releases);
+                loadArtistReleases(artist.releases);
             } else {
                 document.getElementById('artist-details').innerHTML = '<p>Artist not found.</p>';
             }
@@ -47,26 +32,36 @@ function loadArtist() {
         });
 }
 
-function loadReleases(releaseIds) {
+function loadArtistReleases(releases) {
     fetch('data/releases.json')
         .then(response => response.json())
-        .then(releases => {
-            const releasesContainer = document.getElementById('artist-releases');
-            releaseIds.forEach(id => {
-                const release = releases.find(r => r.id === id);
-                if (release) {
-                    const releaseElement = document.createElement('div');
-                    releaseElement.classList.add('artist-release');
-                    
-                    releaseElement.innerHTML = `
-                        <h5><a href="release.html?id=${release.id}">${release.title}</a></h5>
-                        <img src="${release.cover}" alt="Cover of ${release.title}">
-                    `;
-                    releasesContainer.appendChild(releaseElement);
-                }
+        .then(allReleases => {
+            const artistReleases = allReleases.filter(r => releases.includes(r.id));
+            const grid = document.getElementById('artist-releases');
+            artistReleases.forEach(release => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <a href="release.html?id=${release.id}">
+                        <img src="${release.cover}" alt="${release.title}">
+                        <h3>${release.title}</h3>
+                    </a>
+                `;
+                grid.appendChild(card);
             });
         })
         .catch(error => {
             console.error('Error loading artist releases:', error);
+        });
+}
+
+function loadComponent(id, url) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(id).innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading component:', error);
         });
 }

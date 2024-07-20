@@ -4,17 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loadRelease();
 });
 
-function loadComponent(id, url) {
-    fetch(url)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById(id).innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error loading component:', error);
-        });
-}
-
 function loadRelease() {
     const urlParams = new URLSearchParams(window.location.search);
     const releaseId = urlParams.get('id');
@@ -28,16 +17,49 @@ function loadRelease() {
         .then(releases => {
             const release = releases.find(r => r.id === releaseId);
             if (release) {
-                document.getElementById('release-cover').src = release.cover;
                 document.getElementById('release-details').innerHTML = `
-                    <h3>${release.title}</h3>
-                    <p>Details about the release go here.</p>
+                    <img src="${release.cover}" alt="${release.title}">
+                    <h1>${release.title}</h1>
+                    <p>Artist ID: ${release.artist}</p>
                 `;
+                loadReleaseArtist(release.artist);
             } else {
                 document.getElementById('release-details').innerHTML = '<p>Release not found.</p>';
             }
         })
         .catch(error => {
             console.error('Error loading release details:', error);
+        });
+}
+
+function loadReleaseArtist(artistId) {
+    fetch('data/artists.json')
+        .then(response => response.json())
+        .then(artists => {
+            const artist = artists.find(a => a.id === artistId);
+            if (artist) {
+                document.getElementById('release-artist').innerHTML = `
+                    <a href="artist.html?id=${artist.id}">
+                        <img src="${artist.photo}" alt="${artist.name}">
+                        <h3>${artist.name}</h3>
+                    </a>
+                `;
+            } else {
+                document.getElementById('release-artist').innerHTML = '<p>Artist not found.</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error loading artist details:', error);
+        });
+}
+
+function loadComponent(id, url) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(id).innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading component:', error);
         });
 }

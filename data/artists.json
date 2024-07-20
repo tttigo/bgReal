@@ -1,16 +1,16 @@
 [
     {
         "id": "1",
-        "name": "Artista 1",
-        "photo": "img/artistas/artist1.jpg",
-        "bio": "Biografia do Artista 1",
+        "name": "Artist 1",
+        "photo": "img/artists/artist1.jpg",
+        "biography": "Biography of Artist 1",
         "releases": ["1", "2"]
     },
     {
         "id": "2",
-        "name": "Artista 2",
-        "photo": "img/artistas/artist2.jpg",
-        "bio": "Biografia do Artista 2",
+        "name": "Artist 2",
+        "photo": "img/artists/artist2.jpg",
+        "biography": "Biography of Artist 2",
         "releases": ["3"]
     }
 ]

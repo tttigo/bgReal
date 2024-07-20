@@ -1,28 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
     loadComponent('header', 'components/header.html');
     loadComponent('footer', 'components/footer.html');
-    loadArtists();
+    loadReleases();
 });
 
-function loadArtists() {
-    fetch('data/artists.json')
+function loadReleases() {
+    fetch('data/releases.json')
         .then(response => response.json())
-        .then(artists => {
-            const grid = document.getElementById('artists-grid');
-            artists.forEach(artist => {
+        .then(releases => {
+            const grid = document.getElementById('releases-grid');
+            releases.forEach(release => {
                 const card = document.createElement('div');
                 card.className = 'card';
                 card.innerHTML = `
-                    <a href="artist.html?id=${artist.id}">
-                        <img src="${artist.photo}" alt="${artist.name}">
-                        <h3>${artist.name}</h3>
+                    <a href="release.html?id=${release.id}">
+                        <img src="${release.cover}" alt="${release.title}">
+                        <h3>${release.title}</h3>
                     </a>
                 `;
                 grid.appendChild(card);
             });
         })
         .catch(error => {
-            console.error('Error loading artists:', error);
+            console.error('Error loading releases:', error);
         });
 }
 
